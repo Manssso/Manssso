@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <StartupObject></StartupObject>
+    <PackageId>Yuniql.Extensibility</PackageId>
+    <Authors>Rodel E. Dagumampan</Authors>
+    <Product></Product>
+    <Company></Company>
+    <Version>1.0.0</Version>
+    <AssemblyName>Yuniql.Extensibility</AssemblyName>
+    <RootNamespace>Yuniql.Extensibility</RootNamespace>
+    <ApplicationIcon />
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/rdagumampan/yuniql</PackageProjectUrl>
+    <PackageIconUrl>https://github.com/rdagumampan/yuniql/blob/master/assets/favicon.png</PackageIconUrl>
+    <IconUrl>https://github.com/rdagumampan/yuniql/blob/master/assets/favicon.png</IconUrl>
+    <PackageIcon>favicon.png</PackageIcon>
+    <RepositoryUrl>https://github.com/rdagumampan/yuniql</RepositoryUrl>
+    <PackageTags>yuniql sqlserver-migration database-migration sql devops devops-tools database-versioning</PackageTags>
+    <Description>The interfaces to be implemented to build plugins for yuniql-based database migration. See WIKI for how-to instructions.</Description>
+    <Copyright>Copyright 2019 Rodel E. Dagumampan</Copyright>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\play\yuniql\yuniql-extensibility\Yuniql.Extensibility.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="nupkgs\**" />
+    <EmbeddedResource Remove="nupkgs\**" />
+    <None Remove="nupkgs\**" />
+    <None Include="..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="favicon.png" Pack="true" Visible="false" PackagePath="" />  
+  </ItemGroup>
+</Project>

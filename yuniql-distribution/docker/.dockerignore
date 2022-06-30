@@ -1,0 +1,12 @@
+.vs
+.git
+bin
+obj
+*/.vs
+*/.git
+**/bin/
+**/obj/
+**/.vs
+
+nupkgs
+**/nupkgs

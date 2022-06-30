@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<metadata>
+    <id>yuniql</id>
+    <version>$version$</version>
+    <title>Yuniql</title>
+    <summary>An open source schema versioning and database migration engine for SqlServer, PostgreSql and others.</summary>
+    <description><![CDATA[    
+Run database migrations and schema versioning with Yuniql. Supports SqlServer, PostgreSql, MySql and others. For samples and developer guides, visit https://yuniql.io/docs.
+
+**NOTE: This is a BETA RELEASE. Stay tuned for latest features and releases, star or watch project yuniql on Github. See  https://github.com/rdagumampan/yuniql**
+
+![screenshot](https://rawcdn.githack.com/rdagumampan/yuniql/a141e5b5aeda60511d67707ef2d230f81df7807b/assets/wiki-evodb-01.png)
+
+### Supported CLI Commands
+
+```bash
+yuniql init
+yuniql init -p c:\temp\demo | --path c:\temp\demo
+yuniql vnext
+yuniql vnext -M | --major
+yuniql vnext -m | --minor
+yuniql vnext -f "your-script-file.sql"
+yuniql verify
+yuniql run
+yuniql run -c "your-connectiong-string"
+yuniql run -c "your-connectiong-string" --environment DEV
+yuniql run --platform postgresql | --platform mysql
+yuniql run -a true | --auto-create-db true
+yuniql run -p c:\temp\demo | --path c:\temp\demo
+yuniql run -t v1.05 | --target-version v1.05
+yuniql run -k "Token1=TokenValue1,Token2=TokenValue2,Token3=TokenValue3"
+yuniql run --bulk-separator "|"
+yuniql erase
+yuniql -v | --version
+yuniql -h | --help
+yuniql -d | --debug
+```
+
+### License
+Copyright (C) 2019 Rodel E. Dagumampan
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+### Found bugs?
+
+Help us improve further please [create an issue](https://github.com/rdagumampan/yuniql/issues/new).
+
+]]>
+</description>
+    <authors>Rodel E. Dagumampan</authors>
+    <owners>Rodel E. Dagumampan</owners>
+    <projectUrl>https://github.com/rdagumampan/yuniql</projectUrl>
+    <projectSourceUrl>https://github.com/rdagumampan/yuniql</projectSourceUrl>
+    <packageSourceUrl>https://github.com/rdagumampan/yuniql/tree/master/yuniql-distribution/choco</packageSourceUrl>
+    <docsUrl>https://github.com/rdagumampan/yuniql/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/rdagumampan/yuniql/issues</bugTrackerUrl>
+    <licenseUrl>https://github.com/rdagumampan/yuniql/blob/master/LICENSE.md</licenseUrl>
+    <iconUrl>https://rawcdn.githack.com/rdagumampan/yuniql/a141e5b5aeda60511d67707ef2d230f81df7807b/assets/favicon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <copyright>Copyright 2019 Rodel E. Dagumampan</copyright>
+    <tags>yuniql database migration devops</tags>
+    <releaseNotes>https://github.com/rdagumampan/yuniql/wiki/Release-notes</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

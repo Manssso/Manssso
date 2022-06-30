@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Yuniql.CLI": {
+      "commandName": "Project",
+      "commandLineArgs": "run -a --debug --trace-to-file"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ApplicationIcon />
+    <OutputType>Library</OutputType>
+    <StartupObject></StartupObject>
+    <AssemblyName>Yuniql.Oracle</AssemblyName>
+    <RootNamespace>Yuniql.Oracle</RootNamespace>
+    <Version>0.0.1</Version>
+    <Authors>Rodel E. Dagumampan</Authors>
+    <Product>Yuniql.Oracle</Product>
+    <Description>Database migrations and schema versioning adaptor for Oracle. For technical details and samples, visit https://github.com/rdagumampan/yuniql.</Description>
+    <PackageProjectUrl>https://github.com/rdagumampan/yuniql</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/rdagumampan/yuniql</RepositoryUrl>
+    <PackageIcon>favicon.png</PackageIcon>
+    <PackageTags>yuniql oralce-migration database-migration sql devops devops-tools database-versioning</PackageTags>
+    <Copyright>Copyright 2021 Rodel E. Dagumampan</Copyright>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <AssemblyVersion>0.0.1.0</AssemblyVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>Yuniql.Oracle.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="nupkgs\**" />
+    <EmbeddedResource Remove="nupkgs\**" />
+    <None Remove="nupkgs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="3.21.50" />
+    <PackageReference Include="System.Data.Common" Version="4.3.0" />
+    <None Include="favicon.png" Pack="true" Visible="false" PackagePath="" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\yuniql-extensibility\Yuniql.Extensibility.csproj" />
+  </ItemGroup>
+
+</Project>

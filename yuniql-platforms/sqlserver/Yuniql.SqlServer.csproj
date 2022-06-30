@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <StartupObject></StartupObject>
+    <Company></Company>
+    <Version>1.0.0</Version>
+    <AssemblyName>Yuniql.SqlServer</AssemblyName>
+    <RootNamespace>Yuniql.SqlServer</RootNamespace>
+    <ApplicationIcon />
+    <Authors>Rodel E. Dagumampan</Authors>
+    <Product />
+    <PackageProjectUrl>https://github.com/rdagumampan/yuniql</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/rdagumampan/yuniql</RepositoryUrl>
+    <PackageIconUrl>https://github.com/rdagumampan/yuniql/blob/master/assets/favicon.png</PackageIconUrl>
+    <PackageIcon>favicon.png</PackageIcon>
+    <PackageTags>yuniql sqlserver-migration database-migration sql devops devops-tools database-versioning</PackageTags>
+    <Description>Database migrations and schema versioning adaptor for SqlServer. For technical details and samples, visit https://github.com/rdagumampan/yuniql.</Description>
+    <Copyright>Copyright 2019 Rodel E. Dagumampan</Copyright>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>Yuniql.SqlServer.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="nupkgs\**" />
+    <EmbeddedResource Remove="nupkgs\**" />
+    <None Remove="nupkgs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="SchemaUpgrade_v1_1.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SchemaUpgrade_v1_1.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="favicon.png" Pack="true" Visible="false" PackagePath="" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\yuniql-extensibility\Yuniql.Extensibility.csproj" />
+  </ItemGroup>
+
+</Project>
